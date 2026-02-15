@@ -1,0 +1,454 @@
+:root {
+    --sidebar-bg: #2c3e50;
+    --sidebar-hover: #34495e;
+    --primary-orange: #ff9800;
+    --header-bg: #d4b896;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ========== Sidebar Styles ========== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+.sidebar .logo {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+.sidebar .logo h5 {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
+
+.sidebar .logo h5 .text-primary {
+    color: #3498db !important;
+}
+
+.sidebar .logo h5 .text-warning {
+    color: var(--primary-orange) !important;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 5px;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 15px 25px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu a:hover {
+    background-color: var(--sidebar-hover);
+    border-left-color: var(--primary-orange);
+    padding-left: 30px;
+}
+
+.sidebar-menu a.active {
+    background-color: var(--sidebar-hover);
+    border-left-color: var(--primary-orange);
+    color: white;
+    font-weight: 600;
+}
+
+.sidebar-menu a i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* ========== Main Content ========== */
+.main-content {
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+/* ========== Header ========== */
+.top-header {
+    background-color: var(--header-bg);
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.logout-btn {
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+/* ========== Content Area ========== */
+.content-area {
+    padding: 30px;
+}
+
+/* ========== Stats Cards ========== */
+.stats-row {
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h6 {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.stat-card h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    opacity: 0.3;
+}
+
+/* ========== Table Card ========== */
+.table-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.table-card-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.table-card-body {
+    padding: 20px;
+}
+
+/* ========== Custom Table ========== */
+.custom-table {
+    margin-bottom: 0;
+}
+
+.custom-table thead {
+    background-color: #34495e;
+    color: white;
+}
+
+.custom-table thead th {
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.custom-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+/* ========== Status Badges ========== */
+.badge-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.badge-approved {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.badge-completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-cancelled {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* ========== Action Buttons ========== */
+.btn-action {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    margin: 0 2px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+/* ========== Modal Customization ========== */
+.modal-header {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* ========== Account Management ========== */
+.account-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-info h6 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.account-info p {
+    margin: 5px 0 0 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* ========== Page Content ========== */
+.page-content {
+    display: none;
+}
+
+.page-content.active {
+    display: block;
+}
+
+/* ========== Calendar Styles ========== */
+#appointmentCalendar {
+    padding: 20px;
+}
+
+.fc .fc-button {
+    background-color: #667eea;
+    border-color: #667eea;
+    text-transform: capitalize;
+}
+
+.fc .fc-button:hover {
+    background-color: #5568d3;
+    border-color: #5568d3;
+}
+
+.fc .fc-button-active {
+    background-color: #764ba2 !important;
+    border-color: #764ba2 !important;
+}
+
+.fc .fc-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.5);
+}
+
+.fc-daygrid-event {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fc-daygrid-event:hover {
+    transform: scale(1.02);
+}
+
+.fc-event-title {
+    font-weight: 500;
+}
+
+.fc-col-header-cell {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.fc-day-today {
+    background-color: rgba(102, 126, 234, 0.1) !important;
+}
+
+/* Calendar Event Structure - Name on top, Date below (vertical) */
+.fc-event-main {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 4px !important;
+    text-align: center !important;
+}
+
+.fc-event-title {
+    font-size: 0.85em;
+    font-weight: 600;
+    order: 1;
+    white-space: normal !important;
+    line-height: 1.2;
+}
+
+.fc-event-time {
+    font-size: 0.7em;
+    opacity: 0.85;
+    order: 2;
+    margin-top: 2px;
+}
+
+.fc-daygrid-event {
+    white-space: normal !important;
+    align-items: stretch !important;
+}
+
+.fc-daygrid-event-harness {
+    margin-bottom: 2px !important;
+}
+
+/* Make calendar responsive */
+@media (max-width: 768px) {
+    #appointmentCalendar {
+        padding: 10px;
+    }
+    
+    .fc .fc-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .fc .fc-toolbar-title {
+        font-size: 1.2em;
+    }
+    
+    .fc .fc-button {
+        padding: 0.3em 0.5em;
+        font-size: 0.9em;
+    }
+    
+    .fc-event-title {
+        font-size: 0.75em;
+    }
+    
+    .fc-event-time {
+        font-size: 0.65em;
+    }
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+    
+    .top-header {
+        padding: 10px 15px;
+    }
+    
+    .content-area {
+        padding: 15px;
+    }
+    
+    .stat-card {
+        margin-bottom: 15px;
+    }
+    
+    .account-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-menu {
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .sidebar-menu li {
+        margin-bottom: 0;
+    }
+    
+    .sidebar-menu a {
+        white-space: nowrap;
+    }
+}
